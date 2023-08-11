@@ -1,0 +1,333 @@
+@charset "utf-8";
+
+*{ 
+    margin: 0;
+    padding: 0; 
+}
+body{ 
+    /* font-family: 'S-CoreDream', sans-serif; */
+    font-family: 'establishRetrosansOTF';
+    font-size: 13px;
+    line-height: 20px;
+    color: #121212;
+}
+ul, ol{
+    list-style: none;
+}
+img{ 
+    vertical-align: top;
+    border: 0;
+}
+a{
+    text-decoration: none;
+}
+
+.section.sect01, .section.sect02{
+    font-family: 'establishRetrosansOTF';
+}
+.section.sect03{
+    font-family: 'S-CoreDream', sans-serif;
+}
+#wrap{
+    position: relative;
+}
+.popup{
+    padding: 20px;
+    font-family: 'S-CoreDream', sans-serif;
+    position: absolute;
+    top: 100px;
+    left: 650px;
+    right: 650px;
+    background-color: #fff;
+    text-align: center;
+    font-size: 15px;
+}
+.popup button{
+    display: block;
+    width: 60px;
+    padding: 5px 5px;
+    margin: 30px auto 0 auto;
+    border: 0;
+    background-color: #fcc109;
+    font-family: 'S-CoreDream', sans-serif;
+    cursor: pointer;
+}
+/* 헤더영역(모든 html문서에서 공통으로 사용됨) */
+#header{
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    min-width: 1480px;
+    background-color: #131b2f;
+    z-index: 500;
+    border-top: 3px solid #fcc109;
+    border-bottom: 1px solid #edeff8;
+}
+#header ul{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header li{
+    margin: 0 30px;
+}
+#header li a{
+    display: block;
+    padding: 10px 10px 8px 10px;
+    font-size: 20px;
+    color: #fff;
+}
+/* 내비게이션 하이라이트 색상 수정하기 */
+#header li a:hover{
+    color: #fce772;
+}
+#header li.on a{
+    color: #fcc109;
+}
+
+/* index.html 문서 본문영역 */
+.sect01, .sect02{
+    min-width: 1480px;
+    min-height: 800px;
+}
+.sect01{
+    background-image: url(../img/a01_bg1.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.box1{
+    width: 650px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box2{
+    width: 1440px;
+    height: 800px;
+    margin: 0 auto;
+}
+.box2 img{
+    width: 100%;
+    height: auto;
+    margin-top: -50px;
+}
+.box1, .box3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1440px;
+    height: 800px;
+    margin: -400px 0 0 -720px; 
+}
+.box3{
+    height: auto;
+    margin-top: 0;
+    transform: translateY(-50%);
+}
+.box3 h2{
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 1em;
+    font-weight: 500;
+}
+.box4List ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.box4List li{
+    width: 348px;
+    margin-right: 16px;
+    text-align: center;
+}
+.box4List li:nth-child(-n+4){
+    margin-bottom: 50px;
+}
+.box4List li:nth-child(4n){
+    margin-right: 0;
+}
+.box4img{
+    border: 1px solid #eee;
+    margin-bottom: 20px;
+}
+.box4img img{
+    width: 100%;
+    height: auto;
+}
+.b4Title{
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 18px;
+    line-height: 1em;
+    font-weight: 500;
+}
+.b4Title span{
+    font-size: 16px;
+    font-weight: 400;
+}
+.b4Btn{
+    display: flex;
+    justify-content: center;
+}
+.b4Btn .btnA{
+    margin: 0 3px;
+}
+.b4Btn .btnA a{
+    display: block;
+    width: 120px;
+    height: 30px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    margin: 0 auto;
+    line-height: 30px;
+    color: #777;
+    text-align: center;
+}
+.b4Btn .btnA a:hover{
+    background-color: #fce772;
+    border-color: #fce772;
+    color: #333;
+}
+
+/* 인덱스문서의 오른쪽에 있는 페이져 영역 */
+#fp-nav{
+    width: 1280px;
+    position: fixed;
+    /* top: 50%; */
+    bottom: 30px;
+    right: 50%;
+    margin-right: -640px;
+    transform: translateY(-50%);
+    margin-top: 0 !important;
+}
+#fp-nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+#fp-nav li{
+    padding: 8px 0;
+    position: relative;
+}
+.fp-viewing-0 #fp-nav li a{
+    display: block;
+    /* width: 12px;
+    height: 12px; */
+    background-color: transparent;
+    opacity: 0.3;
+    color: #fff;
+    margin-top: -5px;
+    margin-right: -35px;
+}
+.fp-viewing-0 #fp-nav li a::after{
+    content: "";
+    display: block;
+    width: 48px;
+    height: 20px;
+    background-image: url(../img/arrow_w.png);
+}
+.fp-viewing-0 #fp-nav li .active{
+    opacity: 1;
+}
+#fp-nav li a{
+    display: block;
+    /* width: 12px;
+    height: 12px; */
+    background-color: transparent;
+    opacity: 0.3;
+    color: #333;
+    margin-top: -5px;
+    margin-right: -35px;
+}
+#fp-nav li a::after{
+    content: "";
+    display: block;
+    width: 48px;
+    height: 20px;
+    background-image: url(../img/arrow_b.png);
+}
+#fp-nav li .active{
+    opacity: 1;
+}
+#fp-nav li a:before{
+    display: block;
+    position: absolute;
+    top: 3px;
+    right: 20px;
+    width: 100px;
+    text-align: right;
+    opacity: 0;
+}
+#fp-nav li .active:before, #fp-nav li:hover a:before{
+    opacity: 1;
+}
+
+/* sub폴더 안의 project01.html, project02.html 문서의 본문영역 */
+#sub_container{
+    width: 1600px;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+.sub_inner{
+    position: relative;
+}
+
+/* sub폴더 안 페이지의 버튼 공통 스타일 */
+.btn_view{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.btn_view a{
+    display: block;
+    width: 120px;
+    height: 34px;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 34px;
+}
+/* sub폴더 안 각 페이지의 버튼 개별 위치값 */
+.btn_view.pj01_bt1{
+    margin: 250px 0 0 -640px;
+}
+.btn_view.pj01_bt1 a{
+    background-color: #ffcb09;
+}
+.btn_view.pj01_bt1 a:hover{
+    color: #fff;
+}
+.btn_view.pj01_bt2{
+    margin: 330px 0 0 640px;
+}
+.btn_view.pj01_bt2 a{
+    background-color: #ffcb09;
+}
+.btn_view.pj01_bt2 a:hover{
+    color: #fff;
+}
+.btn_view.pj02_bt1{
+    margin: 280px 0 0 -630px;
+}
+.btn_view.pj02_bt1 a{
+    background-color: #446f28;
+    color: #fff;
+}
+.btn_view.pj02_bt1 a:hover{
+    background-color: #d8d46f;
+    color: #333;
+}
+.btn_view.pj02_bt2{
+    margin: 330px 0 0 640px;
+}
+.btn_view.pj02_bt2 a{
+    background-color: #446f28;
+    color: #fff;
+}
+.btn_view.pj02_bt2 a:hover{
+    background-color: #d8d46f;
+    color: #333;
+}
